@@ -1,0 +1,18 @@
+package pack;
+
+import java.io.Serializable;
+import java.util.Arrays;
+
+public class TablaTaller implements Serializable {
+	Object[] tabla;
+
+	public TablaTaller() {
+		tabla = new Object[0];
+	}
+	
+	void insertarFinal(Object nuevo) {
+		tabla = Arrays.copyOf(tabla, tabla.length + 1);
+		tabla[tabla.length - 1] = nuevo;
+	}
+
+}

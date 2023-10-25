@@ -1,0 +1,35 @@
+package Tema_3_Aplicacion;
+
+import java.util.Scanner;
+
+public class App_4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int num,cont = 0;
+		boolean esPrimo = true;
+		System.out.println("Escribe un numero: ");
+		num = sc.nextInt();
+		for (int i = num; i > 1; i--) {
+			
+			for (int j = num-1;j>2 && esPrimo ; j--) {
+				if (j%num==0) {
+					esPrimo=false;
+					
+					
+				}
+			}
+			
+			if (esPrimo) {
+				cont++;
+				num--;
+			} else {
+				num--;
+			}
+		}
+		System.out.println("hay tantos primos: "+cont);
+		
+	}
+
+}

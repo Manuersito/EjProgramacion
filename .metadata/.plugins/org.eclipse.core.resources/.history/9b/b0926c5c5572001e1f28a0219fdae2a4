@@ -1,0 +1,22 @@
+package Tema_3_Ampliacion;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Amp_5 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num;
+		System.out.println("Escribe un numero: ");
+		num = sc.nextInt();
+		boolean esPrimo = false;
+		for (int i = num; i < num+5; i++) {
+			
+		}
+			
+		}
+	}
+		
+		
+	
+

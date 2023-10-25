@@ -1,0 +1,56 @@
+package Tema_3_Aplicacion;
+
+import java.util.Iterator;
+
+public class App_6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int lado = 5;
+		
+		for (int i = 1; i <= lado; i++) {
+			for (int j = 0; j < lado-i; j++) {
+				System.out.print(" ");
+				}
+			for (int k = 1; k<=i; k++) {
+				System.out.print("* ");
+			}
+			
+							
+			
+			System.out.println("");
+		}
+		System.out.println();
+		System.out.println();
+		
+
+		
+		for (int i = 1; i <= lado; i++) {
+			for (int j = 0; j < lado-i; j++) {
+				System.out.print(" ");
+				}
+			
+			for (int k = 1; k<=i; k++) {
+				if (i==lado-1||i==lado||k==i||k==lado) {
+					System.out.print("* ");
+				}
+				else {
+					System.out.print("  ");
+				}
+				
+			}
+			
+							
+			
+			System.out.println("");
+		}
+		
+		
+		
+		
+		
+		
+	}
+	
+
+}

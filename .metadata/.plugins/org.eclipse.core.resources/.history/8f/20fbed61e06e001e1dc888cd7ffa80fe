@@ -1,0 +1,31 @@
+package Ejercicios_Clase;
+
+public class rombo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int lado=9;
+		for (int i = 1; i <= lado; i+=2) {
+			for (int j = 0; j < lado-i; j++) {
+				System.out.print(" ");
+				}
+			for (int k = 1; k<=i; k++) {
+				System.out.print("* ");
+			}			
+			
+			System.out.println("");
+	}
+		for (int i = 1; i <= lado; i+=2) {
+			for (int j = lado-i; j > 0; j--) {
+				System.out.print(" ");
+				}
+			for (int k = 1; k<=i; k++) {
+				System.out.print("* ");
+			}			
+			
+			System.out.println("");
+	
+
+	}
+	}
+}

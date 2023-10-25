@@ -1,0 +1,34 @@
+package Tema_3_Ampliacion;
+
+import java.util.Scanner;
+
+public class Amp_5 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num,cont = 0;
+		System.out.println("Escribe un numero: ");
+		num = sc.nextInt();
+		
+		for (int i = 0; i < 5; i++) {
+			boolean esPrimo = true;
+			for (int j = 2; j < num&&esPrimo; j++) {
+				if (i%j==0) {
+					esPrimo=false;
+					
+					System.out.println(num+" Es Primo");
+				}else {
+					System.out.println(num+" NO Es Primo");
+					cont++;
+					
+				}
+			}
+			esPrimo=true;
+			num++;
+			}
+			}
+			
+		}
+		
+		
+	
+

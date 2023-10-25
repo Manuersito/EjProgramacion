@@ -1,0 +1,37 @@
+package Tema_3_Aplicacion;
+
+import java.util.Scanner;
+
+public class App_3 {
+    public static void main(String[] args) {
+        int hora, min, sec, cont, sI;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Escriba la hora");
+        hora=sc.nextInt();
+        System.out.println("Escriba los minutos");
+        min=sc.nextInt();
+        System.out.println("Escriba los segundos");
+        sec=sc.nextInt();
+        System.out.println("¿Cuantos segundos quieres incrementar?");
+        sI=sc.nextInt();
+        while (hora>=0 && hora<=24);
+        while (min>=0 && min<=59);
+        while (sec>=0 && sec<=59);
+            for ( cont = 0; cont > sI; cont++) {
+                sec++;
+                if (sec==60) {
+                    sec=0;
+                    min++;
+                    if (min==60) {
+                        min=0;
+                        hora++;
+                        if (hora==24) {
+                            hora=0;
+                        }
+                        
+                    }
+                }
+            }
+            System.out.println(hora+":"+min+":"+sec);
+    }
+}

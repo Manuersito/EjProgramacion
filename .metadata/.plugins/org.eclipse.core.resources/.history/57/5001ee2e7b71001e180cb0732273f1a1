@@ -1,0 +1,14 @@
+package Tema_3_Ampliacion;
+
+public class Amp_4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		long num=71263;
+		int par,impar;
+		
+		
+		
+	}
+
+}

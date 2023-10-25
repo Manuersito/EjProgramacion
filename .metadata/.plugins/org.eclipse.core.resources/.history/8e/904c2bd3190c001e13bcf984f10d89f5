@@ -1,0 +1,72 @@
+package pack;
+
+import java.io.Serializable;
+
+public class Taller implements Serializable, Comparable {
+	public Integer id;
+	public String direccion;
+	public String dueño;
+	public Integer NumRep;
+	public Double precioT;
+
+	public Taller(Integer id, String direccion, String dueño, Integer numRep, Double precioT) {
+		this.id = id;
+		this.direccion = direccion;
+		this.dueño = dueño;
+		this.NumRep = numRep;
+		this.precioT = precioT;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public String getDueño() {
+		return dueño;
+	}
+
+	public void setDueño(String dueño) {
+		this.dueño = dueño;
+	}
+
+	public Integer getNumRep() {
+		return NumRep;
+	}
+
+	public void setNumRep(Integer numRep) {
+		NumRep = numRep;
+	}
+
+	public Double getPrecioT() {
+		return precioT;
+	}
+
+	public void setPrecioT(Double precioT) {
+		this.precioT = precioT;
+	}
+
+	@Override
+	public String toString() {
+		return "Taller [id=" + id + ", Direccion=" + direccion + ", Dueño=" + dueño + ", Nº Reparaciones=" + NumRep
+				+ ", Precio total=" + precioT + "]\n";
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return this.NumRep - ((Taller) o).NumRep;
+	}
+
+}
