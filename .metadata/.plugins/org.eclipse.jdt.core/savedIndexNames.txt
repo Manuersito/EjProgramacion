@@ -1,5 +1,0 @@
-INDEX VERSION 1.134+/media/usuario/Clase/Programacion/.metadata/.plugins/org.eclipse.jdt.core
-1627294355.index
-1865797976.index
-2398153663.index
-402242053.index
