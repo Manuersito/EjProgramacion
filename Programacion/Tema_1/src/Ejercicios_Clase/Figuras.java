@@ -2,7 +2,7 @@ package Ejercicios_Clase;
 
 import java.util.Scanner;
 
-public class Figuras {
+public class Figuras {														
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
