@@ -10,7 +10,7 @@ int contpar = 0,contimpar = 0;
 		for (int i = 0; i < a.length; i++) {
 			a[i]=i;
 			if (a[i]%2==0) {
-				contpar++;
+				contpar++;					/*Manuel Bernaldez Carrasco*/
 			} else {
 				contimpar++;
 
