@@ -140,7 +140,7 @@ public class Menu_tablas {
 
              
  // aqui metemos en la posicion 9 del array el numero elejido y sumamos 1 al contador de elementos
-             vector[9] = num;
+             vector[nElemento] = num;
              nElemento++;
 
          }
