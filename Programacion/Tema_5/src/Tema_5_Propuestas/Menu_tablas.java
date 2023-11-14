@@ -23,7 +23,7 @@ public class Menu_tablas {
                     break;
 
                 case 3:
-                    // Agrega la lógica para la opción 3
+                   modVector(vector);
                     break;
 
                 case 4:
@@ -90,7 +90,7 @@ public class Menu_tablas {
 
         switch (op) {
             case 1:
-                // Agrega la lógica para la opción 1
+                eliminarP(vector, nElemento);
                 break;
 
             case 2:
@@ -110,7 +110,7 @@ public class Menu_tablas {
     private static int insertarP(int[] vector, int nElemento) {
         int num;
 // este if mira si hay 1 hueco en el array si lo hay procede a meterlo y si no da error
-        if (nElemento == vector.length - 1) {
+        if (nElemento == vector.length) {
             System.out.println("Error");
         } else {
             System.out.println("Que numero quieres meter");
@@ -132,7 +132,7 @@ public class Menu_tablas {
     
     
     private static int insertarF(int[] vector, int nElemento) {
-    	 if (nElemento == vector.length - 1) {
+    	 if (nElemento == vector.length) {
              System.out.println("Error");
          } else {
              System.out.println("Que numero quieres meter");
@@ -140,7 +140,7 @@ public class Menu_tablas {
 
              
  // aqui metemos en la posicion 9 del array el numero elejido y sumamos 1 al contador de elementos
-             vector[nElemento] = num;
+             vector[9] = num;
              nElemento++;
 
          }
@@ -148,12 +148,47 @@ public class Menu_tablas {
 		return nElemento;
 	}
     
-    public static void listar(int[] vector) {
-		for (int i = 0; i < vector.length; i++) {
-			System.out.print(vector[i]+", ");
-		}
-		System.out.println();
+    //meto para eliminar el primer numero del array
+    
+    private static int eliminarP(int[] vector, int nElemento) {
+
+       
+// este for mueve todos los elemento 1 posicion a la derecha para poder insertar por el principio
+// aqui metemos en la posicion 0 del array el numero elejido y restamos 1 al contador de elementos
+            vector[0] = 0;
+            nElemento--;
+            for (int i = 0; i < nElemento; i++) {
+				vector[i]=vector[i+1];
+			}
+            
+
+        
+
+        return nElemento;
+    }
+
+    
+    //metodo para poder modificar el array
+    public static int[] modVector(int[] vector) {
+    	//pedimos el numero que queremos meter y en la posicion que lo queremos meter
+    	int num,posicion;
+    	System.out.println("Escriba el numero que quieras introducir");
+    	num=opcion();
+    	System.out.println("Escriba la posicion que quieras modificar, recuerda que la primera posicion es 0 y la ultima 9");
+    	posicion=opcion();
+    	
+    	vector[posicion]=num;
+    	
+		return vector;
+		
 	}
     
+    // metodo para listar el array
+    public static void listar(int[] vector) {
+    	for (int i = 0; i < vector.length; i++) {
+    		System.out.print(vector[i]+", ");
+    	}
+    	System.out.println();
+    }
     
 }
