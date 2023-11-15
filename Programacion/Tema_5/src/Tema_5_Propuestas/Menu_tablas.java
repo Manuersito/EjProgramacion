@@ -23,7 +23,7 @@ public class Menu_tablas {
                     break;
 
                 case 3:
-                   modVector(vector);
+                   modVector(vector, nElemento);
                     break;
 
                 case 4:
@@ -31,8 +31,8 @@ public class Menu_tablas {
                     break;
 
                 case 5:
-                    // Agrega la lógica para la opción 5
-                    break;
+                	ordenar(vector,nElemento);
+                	break;
 
                 case 6:
                     // Agrega la lógica para la opción 6
@@ -49,6 +49,7 @@ public class Menu_tablas {
     }
 
     public static void menu() {
+    	System.out.println();
         System.out.println(
                 "Elige opcion: \n 1.Insertar \n 2.Eliminar \n 3.Modificar \n 4.Listar \n 5.Ordenar \n 6.Buscar \n 7.Salir");
     }
@@ -94,7 +95,7 @@ public class Menu_tablas {
                 break;
 
             case 2:
-                // Agrega la lógica para la opción 2
+                eliminarF(vector, nElemento);
                 break;
 
             case 3:
@@ -130,7 +131,7 @@ public class Menu_tablas {
     
     
     
-    
+    //
     private static int insertarF(int[] vector, int nElemento) {
     	 if (nElemento == vector.length) {
              System.out.println("Error");
@@ -139,8 +140,8 @@ public class Menu_tablas {
              int num = opcion();
 
              
- // aqui metemos en la posicion 9 del array el numero elejido y sumamos 1 al contador de elementos
-             vector[9] = num;
+ // aqui metemos en la posicion nElemento del array el numero elejido y sumamos 1 al contador de elementos
+             vector[nElemento-1] = num;
              nElemento++;
 
          }
@@ -148,38 +149,69 @@ public class Menu_tablas {
 		return nElemento;
 	}
     
-    //meto para eliminar el primer numero del array
+    
+    
+    
+    
+    //metodo para eliminar el primer numero del array
     
     private static int eliminarP(int[] vector, int nElemento) {
-
-       
+//aqui se valida los datos para que si el vector este vacio no puedas eliminar nada
+      if (nElemento==0) {
+		System.out.println("El vector esta vacio");
+	} else {
 // este for mueve todos los elemento 1 posicion a la derecha para poder insertar por el principio
+		for (int i = 0; i < nElemento-1; i++) {
+			vector[i]=vector[i+1];
+		}
 // aqui metemos en la posicion 0 del array el numero elejido y restamos 1 al contador de elementos
-            vector[0] = 0;
-            nElemento--;
-            for (int i = 0; i < nElemento; i++) {
-				vector[i]=vector[i+1];
-			}
+        vector[nElemento-1]=0;
+        nElemento--;
+	}
             
-
-        
+                    
 
         return nElemento;
     }
+    
+    
+    //Metodo para eliminar el ultimo elemento de la tabla
+    private static int eliminarF(int[] vector, int nElemento) {
+    	if (nElemento==0) {
+    		System.out.println("El vector esta vacio");
+    	} else {
+    
+    		
+    // aqui metemos en la posicion de nElemento del array el numero elejido y restamos 1 al contador de elementos
+            vector[nElemento-1]=0;
+            nElemento--;
+    	}
+
+        
+
+		return nElemento;
+	}
 
     
+    
+    
+    
     //metodo para poder modificar el array
-    public static int[] modVector(int[] vector) {
+    public static int modVector(int[] vector, int nElemento) {
     	//pedimos el numero que queremos meter y en la posicion que lo queremos meter
     	int num,posicion;
-    	System.out.println("Escriba el numero que quieras introducir");
-    	num=opcion();
-    	System.out.println("Escriba la posicion que quieras modificar, recuerda que la primera posicion es 0 y la ultima 9");
-    	posicion=opcion();
     	
+    	do {
+    		System.out.println("Escriba la posicion que quieras modificar, recuerda que la primera posicion es 0 y la ultima 9");
+    		posicion=opcion();
+    		System.out.println("Escriba el numero que quieras introducir");
+    		num=opcion();
+			
+		} while (posicion<0 || posicion>nElemento-1);
     	vector[posicion]=num;
     	
-		return vector;
+    	nElemento++;
+		return nElemento;
 		
 	}
     
@@ -190,5 +222,25 @@ public class Menu_tablas {
     	}
     	System.out.println();
     }
+    
+    
+    
+    //metodo ordenar el array
+    
+    public static int[] ordenar(int[] vector,int nElemento) {
+    	int i, j, aux;
+        for (i = 0; i < nElemento - 1; i++) {
+            for (j = 0; j < nElemento - i - 1; j++) {                                                              
+                if (vector[j + 1] < vector[j]) {
+                    aux = vector[j + 1];
+                    vector[j + 1] = vector[j];
+                    vector[j] = aux;
+                }
+            }
+        }
+    	
+    	return vector;
+		
+	}
     
 }
