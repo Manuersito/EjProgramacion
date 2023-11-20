@@ -243,4 +243,33 @@ public class Menu_tablas {
 		
 	}
     
+    
+    //metodo para buscar
+    
+    public static int buscar(int[] vector,int nElemento, boolean ordenado) {
+    	int pos = 0,l=0,x = 0;
+    	
+    	if (ordenado==true) {
+			//busqueda dicotomica
+    		 while (l <= nElemento) {
+    	            int i = l + (nElemento - l) / 2;
+
+    	            if (vector[i] == x)
+    	                return i;
+    	 
+    	            if (vector[i] < x)
+    	                l = i + 1;
+    	 
+    	            else
+    	                pos = i - 1;
+    	        }
+    	        return -1;
+		} else {
+			//busqueda secuencial
+		}
+    	
+		return pos;
+		
+	}
+    
 }
