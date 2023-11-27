@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/home/usuario/Escritorio/WSEx2Ev1/.metadata/.plugins/org.eclipse.jdt.core
+1226719149.index
+1865797976.index
+2410053888.index

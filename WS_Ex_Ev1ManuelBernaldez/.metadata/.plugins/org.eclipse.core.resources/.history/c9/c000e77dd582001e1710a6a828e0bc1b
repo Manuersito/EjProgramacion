@@ -1,0 +1,63 @@
+package ejercicios_examen;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class ej4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int notaAlumno=0,min=0,max=0,mintotal = 0,maxtotal = 0,clase = 0;
+		double media=0,mediatotal = 0;
+		for (int i = 1; i <= 3; i++) {
+			System.out.println("clase "+i);
+			for (int j = 1; j <= 5; j++) {
+				System.out.print("Escribe nota alumno: ");
+				notaAlumno=(int) (Math.random()*10+1);
+				System.out.println("");
+				System.out.print("Alumno "+j+" : "+notaAlumno);
+				System.out.println("");
+				
+				
+				
+					if (notaAlumno>max) {
+						max=notaAlumno;
+					} else {
+						min=notaAlumno;
+					}
+					media+=notaAlumno;
+					
+					
+				
+				
+				
+			}
+			if (max>maxtotal) {
+				maxtotal=max;
+				clase=i;
+			} else {
+				mintotal=min;
+				clase=i;
+			}
+			mediatotal+=media;
+			
+			System.out.println("la nota maxima de la clase "+i+" es : "+max);
+			System.out.println("la nota minima de la clase "+i+" es : "+min);
+			media=media/5;
+			System.out.println("la nota media de la clase "+i+" es : "+media);
+			media=0;
+			max=-1;
+			min=11;
+			
+
+			
+		}
+			System.out.println("la nota maxima es : "+maxtotal+" de la clase "+clase);
+			System.out.println("la nota minima es : "+mintotal+" de la clase "+clase);
+			mediatotal=mediatotal/3;
+			System.out.println("la nota media total es : "+mediatotal);
+
+	}
+
+}

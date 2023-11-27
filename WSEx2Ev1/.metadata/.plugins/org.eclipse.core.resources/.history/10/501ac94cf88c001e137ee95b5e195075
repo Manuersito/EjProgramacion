@@ -1,0 +1,38 @@
+package pack;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int v=0,n=0,k=0,v1=0,v2=0;
+		int[] vector = {1, 2, 3, 4, 5};
+        System.out.println("Vector original: ");
+        imprimirVector(vector);
+        
+        rotarDerecha(vector);
+        
+        System.out.println("\nVector rotado hacia la derecha: ");
+        imprimirVector(vector);
+    }
+
+    // Método para rotar un vector hacia la derecha
+    static void rotarDerecha(int[] vector) {
+        int ultimoElemento = vector[vector.length - 1];
+
+        for (int i = vector.length - 1; i > 0; i--) {
+            vector[i] = vector[i - 1];
+        }
+
+        vector[0] = ultimoElemento;
+    }
+
+    // Método para imprimir un vector
+    static void imprimirVector(int[] vector) {
+        for (int i : vector) {
+            System.out.print(i + " ");
+        }
+	
+    }
+}

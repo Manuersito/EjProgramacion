@@ -12,7 +12,7 @@ public class Menu_tablas {
 
         do {
             menu();
-            op = opcion();
+            op = ();
 
             switch (op) {
                 case 1:

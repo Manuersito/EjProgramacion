@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/home/usuario/Escritorio/WS_Ex_Ev1ManuelBernaldez/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+2410053888.index
+3857933634.index
