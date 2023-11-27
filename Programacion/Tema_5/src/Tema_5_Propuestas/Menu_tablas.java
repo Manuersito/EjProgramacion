@@ -7,6 +7,7 @@ public class Menu_tablas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int op, nElemento = 0;
+        boolean ordenado=false;
         int[] vector = new int[10];
 
         do {
@@ -32,10 +33,12 @@ public class Menu_tablas {
 
                 case 5:
                 	ordenar(vector,nElemento);
+                       ordenado=true;     
+
                 	break;
 
                 case 6:
-                    // Agrega la lógica para la opción 6
+                    buscar(vector, nElemento, ordenado);
                     break;
             }
 
@@ -99,7 +102,7 @@ public class Menu_tablas {
                 break;
 
             case 3:
-                // Agrega la lógica para la opción 3
+                eliminarc(vector, nElemento);
                 break;
         }
 		return nElemento;
@@ -192,7 +195,28 @@ public class Menu_tablas {
 		return nElemento;
 	}
 
+      //metodo para eliminar cualquier numero del array
     
+    private static int eliminarc(int[] vector, int nElemento) {
+//aqui se valida los datos para que si el vector este vacio no puedas eliminar nada
+      if (nElemento==0) {
+		System.out.println("El vector esta vacio");
+	} else {
+// este for mueve todos los elemento 1 posicion a la derecha para poder insertar por el principio
+		for (int i = 0; i < nElemento-1; i++) {
+			vector[i]=vector[i+1];
+		}
+// aqui metemos en la posicion 0 del array el numero elejido y restamos 1 al contador de elementos
+        system.out.println("Que posicion quieres borrar");
+        int x = opcion();
+        vector[x]=0;
+        nElemento--;
+	}
+            
+                    
+
+        return nElemento;
+    }
     
     
     
@@ -246,29 +270,38 @@ public class Menu_tablas {
     
     //metodo para buscar
     
-    public static int buscar(int[] vector,int nElemento, boolean ordenado) {
-    	int pos = 0,l=0,x = 0;
+    public static void buscar(int[] vector,int nElemento, boolean ordenado) {
+    	 System.out.println("Que numero quiers buscar?");
+                
+        int pos = 0,x = opcion();
+
     	
     	if (ordenado==true) {
 			//busqueda dicotomica
-    		 while (l <= nElemento) {
-    	            int i = l + (nElemento - l) / 2;
+    		 while (pos <= nElemento) {
+    	            int i = x + (nElemento - pos) / 2;
 
     	            if (vector[i] == x)
-    	                return i;
+                    pos = i;
+    	                System.out.println(pos);
     	 
     	            if (vector[i] < x)
-    	                l = i + 1;
+    	                pos = i + 1;
     	 
     	            else
     	                pos = i - 1;
     	        }
-    	        return -1;
+    	        
 		} else {
 			//busqueda secuencial
+            for (int i = 0; i < vector.length; i++) {
+                if (vector[i]==x) {
+                    pos=i;
+                }
+            }
 		}
     	
-		return pos;
+		System.out.println(pos);
 		
 	}
     
