@@ -192,6 +192,7 @@ public class Ejercicio1 {
         }
         
         System.out.println("se han eliminado "+cont+" elementos del array ");
+        imprimirVector(vector);
     }
 	
 }

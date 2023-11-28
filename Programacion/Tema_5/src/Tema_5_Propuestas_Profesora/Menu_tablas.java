@@ -1,4 +1,4 @@
-package Tema_5_Propuestas;
+package Tema_5_Propuestas_Profesora;
 
 import java.util.*;
 
@@ -12,7 +12,7 @@ public class Menu_tablas {
 
         do {
             menu();
-            op = ();
+            op = opcion();
 
             switch (op) {
                 case 1:
@@ -207,7 +207,7 @@ public class Menu_tablas {
 			vector[i]=vector[i+1];
 		}
 // aqui metemos en la posicion 0 del array el numero elejido y restamos 1 al contador de elementos
-        system.out.println("Que posicion quieres borrar");
+        System.out.println("Que posicion quieres borrar");
         int x = opcion();
         vector[x]=0;
         nElemento--;

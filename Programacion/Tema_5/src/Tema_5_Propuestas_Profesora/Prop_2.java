@@ -1,4 +1,4 @@
-package Tema_5_Propuestas;
+package Tema_5_Propuestas_Profesora;
 
 public class Prop_2 {
 
