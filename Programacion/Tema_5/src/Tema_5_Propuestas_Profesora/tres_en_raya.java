@@ -5,32 +5,36 @@ import java.util.*;
 public class tres_en_raya {
 
 	public static void main(String[] args) {
-		int player1 = 1, player2 = -1, cont = 9, op;
-		boolean winner = false;
+	    int cont = 9;
+		int winner = 0;
 		int[][] board = new int[3][3];
 
 		do {
 			viewBoard(board);
 			game(board, cont);
-			winner(board, winner);
+			winner=winner(board, winner);
 			cont--;
-		} while (!winner || cont != 0);
+		} while (winner != 3 && winner != -3 && cont != 0);
 		viewBoard(board);
-		if (winner) {
-			System.out.println("¡Tenemos un ganador!");
+		if (winner == 3) {
+			System.out.println("Ganador Player 1");
 		} else {
-			System.out.println("El juego terminó en empate.");
+			if (winner == -3) {
+				System.out.println("Ganador Player 2");
+			} else {
+				System.out.println("ha habido un empate");
+			}
 		}
 
 	}
 
 	static int[][] game(int[][] board, int cont) {
 		if (cont % 2 == 0) {
-			System.out.println("Player 2");
+			System.out.println("  👩‍💻"+" 2\uFE0F");
 			viewBoardPosition();
 			position(board, cont);
 		} else {
-			System.out.println("Player 1");
+			System.out.println("  👨‍💻"+" 1\uFE0F");
 			viewBoardPosition();
 			position(board, cont);
 		}
@@ -41,148 +45,149 @@ public class tres_en_raya {
 		System.out.println("Elige posicion");
 		int op = opcion();
 		switch (op) {
-			case 1:
-				if (board[0][0] == 0) {
-					if (cont % 2 == 0) {
-						board[0][0] = -1;
-					} else {
-						board[0][0] = 1;
-					}
+		case 1:
+			if (board[0][0] == 0) {
+				if (cont % 2 == 0) {
+					board[0][0] = -1;
 				} else {
-					System.out.println("Posición ocupada. Inténtalo de nuevo.");
-					return position(board, cont);
+					board[0][0] = 1;
 				}
+			} else {
+				System.out.println("Posición ocupada. Inténtalo de nuevo.");
+				return position(board, cont);
+			}
 
-				break;
-			case 2:
-				if (board[0][1] == 0) {
-					if (cont % 2 == 0) {
-						board[0][1] = -1;
-					} else {
-						board[0][1] = 1;
-					}
+			break;
+		case 2:
+			if (board[0][1] == 0) {
+				if (cont % 2 == 0) {
+					board[0][1] = -1;
 				} else {
-					System.out.println("Posición ocupada. Inténtalo de nuevo.");
-					return position(board, cont);
+					board[0][1] = 1;
 				}
-			case 3:
-				if (board[0][2] == 0) {
-					if (cont % 2 == 0) {
-						board[0][2] = -1;
-					} else {
-						board[0][2] = 1;
-					}
+			} else {
+				System.out.println("Posición ocupada. Inténtalo de nuevo.");
+				return position(board, cont);
+			}
+			break;
+		case 3:
+			if (board[0][2] == 0) {
+				if (cont % 2 == 0) {
+					board[0][2] = -1;
 				} else {
-					System.out.println("Posición ocupada. Inténtalo de nuevo.");
-					return position(board, cont);
+					board[0][2] = 1;
 				}
-				break;
-			case 4:
-				if (board[1][0] == 0) {
-					if (cont % 2 == 0) {
-						board[1][0] = -1;
-					} else {
-						board[1][0] = 1;
-					}
+			} else {
+				System.out.println("Posición ocupada. Inténtalo de nuevo.");
+				return position(board, cont);
+			}
+			break;
+		case 4:
+			if (board[1][0] == 0) {
+				if (cont % 2 == 0) {
+					board[1][0] = -1;
 				} else {
-					System.out.println("Posición ocupada. Inténtalo de nuevo.");
-					return position(board, cont);
+					board[1][0] = 1;
 				}
-				break;
-			case 5:
-				if (board[1][1] == 0) {
-					if (cont % 2 == 0) {
-						board[1][1] = -1;
-					} else {
-						board[1][1] = 1;
-					}
+			} else {
+				System.out.println("Posición ocupada. Inténtalo de nuevo.");
+				return position(board, cont);
+			}
+			break;
+		case 5:
+			if (board[1][1] == 0) {
+				if (cont % 2 == 0) {
+					board[1][1] = -1;
 				} else {
-					System.out.println("Posición ocupada. Inténtalo de nuevo.");
-					return position(board, cont);
+					board[1][1] = 1;
 				}
-				break;
-			case 6:
-				if (board[1][2] == 0) {
-					if (cont % 2 == 0) {
-						board[1][2] = -1;
-					} else {
-						board[1][2] = 1;
-					}
+			} else {
+				System.out.println("Posición ocupada. Inténtalo de nuevo.");
+				return position(board, cont);
+			}
+			break;
+		case 6:
+			if (board[1][2] == 0) {
+				if (cont % 2 == 0) {
+					board[1][2] = -1;
 				} else {
-					System.out.println("Posición ocupada. Inténtalo de nuevo.");
-					return position(board, cont);
+					board[1][2] = 1;
 				}
-				break;
-			case 7:
-				if (board[2][0] == 0) {
-					if (cont % 2 == 0) {
-						board[2][0] = -1;
-					} else {
-						board[2][0] = 1;
-					}
+			} else {
+				System.out.println("Posición ocupada. Inténtalo de nuevo.");
+				return position(board, cont);
+			}
+			break;
+		case 7:
+			if (board[2][0] == 0) {
+				if (cont % 2 == 0) {
+					board[2][0] = -1;
 				} else {
-					System.out.println("Posición ocupada. Inténtalo de nuevo.");
-					return position(board, cont);
+					board[2][0] = 1;
 				}
-				break;
-			case 8:
-				if (board[2][1] == 0) {
-					if (cont % 2 == 0) {
-						board[2][1] = -1;
-					} else {
-						board[2][1] = 1;
-					}
+			} else {
+				System.out.println("Posición ocupada. Inténtalo de nuevo.");
+				return position(board, cont);
+			}
+			break;
+		case 8:
+			if (board[2][1] == 0) {
+				if (cont % 2 == 0) {
+					board[2][1] = -1;
 				} else {
-					System.out.println("Posición ocupada. Inténtalo de nuevo.");
-					return position(board, cont);
+					board[2][1] = 1;
 				}
-				break;
-			case 9:
-				if (board[2][2] == 0) {
-					if (cont % 2 == 0) {
-						board[2][2] = -1;
-					} else {
-						board[2][2] = 1;
-					}
+			} else {
+				System.out.println("Posición ocupada. Inténtalo de nuevo.");
+				return position(board, cont);
+			}
+			break;
+		case 9:
+			if (board[2][2] == 0) {
+				if (cont % 2 == 0) {
+					board[2][2] = -1;
 				} else {
-					System.out.println("Posición ocupada. Inténtalo de nuevo.");
-					return position(board, cont);
+					board[2][2] = 1;
 				}
-				break;
+			} else {
+				System.out.println("Posición ocupada. Inténtalo de nuevo.");
+				return position(board, cont);
+			}
+			break;
 
 		}
 		return board;
 	}
 
 	// Método para verificar si hay un ganador en el tablero
-	static boolean winner(int[][] tablero, boolean winner) {
+	static int winner(int[][] tablero, int winner) {
 		// Verificar filas y columnas
 		for (int i = 0; i < 3; i++) {
 			// Verificar filas
 			if (tablero[i][0] + tablero[i][1] + tablero[i][2] == 3) {
-				winner = true; // Hay un ganador (player 1) en la fila i
+				winner = 3; // Hay un ganador (player 1) en la fila i
 				break;
 			} else if (tablero[i][0] + tablero[i][1] + tablero[i][2] == -3) {
-				winner = true; // Hay un ganador (player 2) en la fila i
+				winner = -3; // Hay un ganador (player 2) en la fila i
 				break;
 			}
 
 			// Verificar columnas
 			if (tablero[0][i] + tablero[1][i] + tablero[2][i] == 3) {
-				winner = true; // Hay un ganador (player 1) en la columna i
+				winner = 3; // Hay un ganador (player 1) en la columna i
 				break;
 			} else if (tablero[0][i] + tablero[1][i] + tablero[2][i] == -3) {
-				winner = true; // Hay un ganador (player 2) en la columna i
+				winner = -3; // Hay un ganador (player 2) en la columna i
 				break;
 			}
 		}
 
 		// Verificar diagonales
 		if (tablero[0][0] + tablero[1][1] + tablero[2][2] == 3 || tablero[0][2] + tablero[1][1] + tablero[2][0] == 3) {
-			winner = true; // Hay un ganador (player 1) en alguna diagonal
+			winner = 3; // Hay un ganador (player 1) en alguna diagonal
 		} else if (tablero[0][0] + tablero[1][1] + tablero[2][2] == -3
 				|| tablero[0][2] + tablero[1][1] + tablero[2][0] == -3) {
-			winner = true; // Hay un ganador (player 2) en alguna diagonal
+			winner = -3; // Hay un ganador (player 2) en alguna diagonal
 		}
 
 		return winner;
@@ -192,7 +197,15 @@ public class tres_en_raya {
 	static void viewBoard(int[][] board) {
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				System.out.print("[" + board[i][j] + "] ");
+				if (board[i][j]==1) {
+					System.out.print("[" + "❌" + "] ");
+				} else {if (board[i][j]==-1) {
+					System.out.print("[" + "⭕" + "] ");
+				}else {
+					System.out.print("[" + "▫️" + "] ");
+				}
+
+				}
 			}
 			System.out.println();
 		}
@@ -202,23 +215,28 @@ public class tres_en_raya {
 
 	static void viewBoardPosition() {
 		int c = 1;
+
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				System.out.print("[" + c + "] ");
+				String cadenaNumero = String.valueOf(c); 
+		        String resultado = cadenaNumero + "\uFE0F\u20E3";
+				System.out.print(resultado+" ");
 				c++;
 			}
 			System.out.println();
 		}
 		System.out.println();
 
+		
+		
 	}
 
 	static int opcion() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Elige numero");
 		int op = sc.nextInt();
+		sc.close();
 		return op;
-
 	}
 
 }
