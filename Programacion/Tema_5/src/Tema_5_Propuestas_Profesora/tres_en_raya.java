@@ -5,14 +5,14 @@ import java.util.*;
 public class tres_en_raya {
 
 	public static void main(String[] args) {
-	    int cont = 9;
+		int cont = 9;
 		int winner = 0;
 		int[][] board = new int[3][3];
 
 		do {
 			viewBoard(board);
 			game(board, cont);
-			winner=winner(board, winner);
+			winner = winner(board, winner);
 			cont--;
 		} while (winner != 3 && winner != -3 && cont != 0);
 		viewBoard(board);
@@ -20,9 +20,9 @@ public class tres_en_raya {
 			System.out.println("Ganador Player 1");
 		} else {
 			if (winner == -3) {
-				System.out.println("Ganador Player 2");
+				System.out.println("Ganador Maquina");
 			} else {
-				System.out.println("ha habido un empate");
+				System.out.println("Ha habido un empate");
 			}
 		}
 
@@ -30,11 +30,11 @@ public class tres_en_raya {
 
 	static int[][] game(int[][] board, int cont) {
 		if (cont % 2 == 0) {
-			System.out.println("  👩‍💻"+" 2\uFE0F");
+			System.out.println("  🖥️");
 			viewBoardPosition();
 			position(board, cont);
 		} else {
-			System.out.println("  👨‍💻"+" 1\uFE0F");
+			System.out.println("  👨‍💻");
 			viewBoardPosition();
 			position(board, cont);
 		}
@@ -42,8 +42,15 @@ public class tres_en_raya {
 	}
 
 	static int[][] position(int[][] board, int cont) {
-		System.out.println("Elige posicion");
-		int op = opcion();
+		int op;
+
+		if (cont % 2 == 0) {
+			op = (int) (Math.random() * 9 + 1);
+		} else {
+			System.out.println("Elige posicion");
+			op = opcion();
+		}
+
 		switch (op) {
 		case 1:
 			if (board[0][0] == 0) {
@@ -53,8 +60,15 @@ public class tres_en_raya {
 					board[0][0] = 1;
 				}
 			} else {
-				System.out.println("Posición ocupada. Inténtalo de nuevo.");
-				return position(board, cont);
+				if (cont % 2 == 0) {
+					return position(board, cont);
+				} else {
+					System.out.println();
+					System.out.println("Posición ocupada. Inténtalo de nuevo.");
+					System.out.println();
+					return position(board, cont);
+				}
+
 			}
 
 			break;
@@ -66,8 +80,14 @@ public class tres_en_raya {
 					board[0][1] = 1;
 				}
 			} else {
-				System.out.println("Posición ocupada. Inténtalo de nuevo.");
-				return position(board, cont);
+				if (cont % 2 == 0) {
+					return position(board, cont);
+				} else {
+					System.out.println();
+					System.out.println("Posición ocupada. Inténtalo de nuevo.");
+					System.out.println();
+					return position(board, cont);
+				}
 			}
 			break;
 		case 3:
@@ -78,8 +98,14 @@ public class tres_en_raya {
 					board[0][2] = 1;
 				}
 			} else {
-				System.out.println("Posición ocupada. Inténtalo de nuevo.");
-				return position(board, cont);
+				if (cont % 2 == 0) {
+					return position(board, cont);
+				} else {
+					System.out.println();
+					System.out.println("Posición ocupada. Inténtalo de nuevo.");
+					System.out.println();
+					return position(board, cont);
+				}
 			}
 			break;
 		case 4:
@@ -90,8 +116,14 @@ public class tres_en_raya {
 					board[1][0] = 1;
 				}
 			} else {
-				System.out.println("Posición ocupada. Inténtalo de nuevo.");
-				return position(board, cont);
+				if (cont % 2 == 0) {
+					return position(board, cont);
+				} else {
+					System.out.println();
+					System.out.println("Posición ocupada. Inténtalo de nuevo.");
+					System.out.println();
+					return position(board, cont);
+				}
 			}
 			break;
 		case 5:
@@ -102,8 +134,14 @@ public class tres_en_raya {
 					board[1][1] = 1;
 				}
 			} else {
-				System.out.println("Posición ocupada. Inténtalo de nuevo.");
-				return position(board, cont);
+				if (cont % 2 == 0) {
+					return position(board, cont);
+				} else {
+					System.out.println();
+					System.out.println("Posición ocupada. Inténtalo de nuevo.");
+					System.out.println();
+					return position(board, cont);
+				}
 			}
 			break;
 		case 6:
@@ -114,8 +152,14 @@ public class tres_en_raya {
 					board[1][2] = 1;
 				}
 			} else {
-				System.out.println("Posición ocupada. Inténtalo de nuevo.");
-				return position(board, cont);
+				if (cont % 2 == 0) {
+					return position(board, cont);
+				} else {
+					System.out.println();
+					System.out.println("Posición ocupada. Inténtalo de nuevo.");
+					System.out.println();
+					return position(board, cont);
+				}
 			}
 			break;
 		case 7:
@@ -126,8 +170,14 @@ public class tres_en_raya {
 					board[2][0] = 1;
 				}
 			} else {
-				System.out.println("Posición ocupada. Inténtalo de nuevo.");
-				return position(board, cont);
+				if (cont % 2 == 0) {
+					return position(board, cont);
+				} else {
+					System.out.println();
+					System.out.println("Posición ocupada. Inténtalo de nuevo.");
+					System.out.println();
+					return position(board, cont);
+				}
 			}
 			break;
 		case 8:
@@ -138,8 +188,14 @@ public class tres_en_raya {
 					board[2][1] = 1;
 				}
 			} else {
-				System.out.println("Posición ocupada. Inténtalo de nuevo.");
-				return position(board, cont);
+				if (cont % 2 == 0) {
+					return position(board, cont);
+				} else {
+					System.out.println();
+					System.out.println("Posición ocupada. Inténtalo de nuevo.");
+					System.out.println();
+					return position(board, cont);
+				}
 			}
 			break;
 		case 9:
@@ -150,8 +206,14 @@ public class tres_en_raya {
 					board[2][2] = 1;
 				}
 			} else {
-				System.out.println("Posición ocupada. Inténtalo de nuevo.");
-				return position(board, cont);
+				if (cont % 2 == 0) {
+					return position(board, cont);
+				} else {
+					System.out.println();
+					System.out.println("Posición ocupada. Inténtalo de nuevo.");
+					System.out.println();
+					return position(board, cont);
+				}
 			}
 			break;
 
@@ -197,13 +259,14 @@ public class tres_en_raya {
 	static void viewBoard(int[][] board) {
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (board[i][j]==1) {
+				if (board[i][j] == 1) {
 					System.out.print("[" + "❌" + "] ");
-				} else {if (board[i][j]==-1) {
-					System.out.print("[" + "⭕" + "] ");
-				}else {
-					System.out.print("[" + "▫️" + "] ");
-				}
+				} else {
+					if (board[i][j] == -1) {
+						System.out.print("[" + "⭕" + "] ");
+					} else {
+						System.out.print("[" + "▫️" + "] ");
+					}
 
 				}
 			}
@@ -218,24 +281,21 @@ public class tres_en_raya {
 
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				String cadenaNumero = String.valueOf(c); 
-		        String resultado = cadenaNumero + "\uFE0F\u20E3";
-				System.out.print(resultado+" ");
+				String cadenaNumero = String.valueOf(c);
+				String resultado = cadenaNumero + "\uFE0F\u20E3";
+				System.out.print(resultado + " ");
 				c++;
 			}
 			System.out.println();
 		}
 		System.out.println();
 
-		
-		
 	}
 
 	static int opcion() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Elige numero");
 		int op = sc.nextInt();
-		sc.close();
+
 		return op;
 	}
 
