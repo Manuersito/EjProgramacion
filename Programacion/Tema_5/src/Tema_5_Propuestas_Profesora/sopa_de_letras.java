@@ -10,14 +10,17 @@ public class sopa_de_letras {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		char[][] tablero = new char[15][15];
-		String[] palabras = { "DORMIR", "CALMARLA", "KIFI", "TOCADO", "GRIPAO", "DIABOLICO", "MANUBRIO", "TRISTE" };
-		int cont = 0;
+		String[] palabras = { "DORMIR", "CALMARLA", "KIFI", "TOCADO", "GRIPAO", "DIABOLICO", "MANUBRIO", "TRISTE" };		int cont = 0;
 		rellenarMatrizAleatoria(tablero);
-
+		rellenarMatrizConPalabras(tablero, palabras);
 		do {
 			imprimirMatriz(tablero);
+			System.out.println();
 			String intento = intentos(); ;
-			comprobarPalabra(palabras, cont, intento);
+			cont=comprobarPalabra(palabras, cont, intento);
+			System.out.println();
+			System.out.println(cont);
+			System.out.println();
 		} while (cont != 8);
 	}
 
@@ -63,6 +66,28 @@ public class sopa_de_letras {
 		return cont;
 	}
 
+	private static void rellenarMatrizConPalabras(char[][] matriz, String[] palabras) {
+        Random random = new Random();
+
+        for (String palabra : palabras) {
+            
+            int fila = random.nextInt(matriz.length);
+            int columna = random.nextInt(matriz[0].length - palabra.length() + 1);
+
+            
+            if (columna >= 0 && columna + palabra.length() <= matriz[0].length) {
+                
+                for (int i = 0; i < palabra.length(); i++) {
+                    matriz[fila][columna + i] = palabra.charAt(i);
+                }
+            } else {
+                
+                rellenarMatrizConPalabras(matriz, palabras);
+            }
+        }
+    }
+
+	
 	private static String intentos() {
 		// TODO Auto-generated method stub
 		String intento;
