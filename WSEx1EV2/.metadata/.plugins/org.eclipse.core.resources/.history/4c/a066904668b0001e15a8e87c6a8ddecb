@@ -1,0 +1,46 @@
+package pack;
+
+import java.util.Scanner;
+
+public class ej5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int RANGINF=1; 
+		int RANGSUP=8;
+		int [][] v = generaArrayBiInt(RANGINF, RANGSUP);
+	}
+
+	static int[][] generaArrayBiInt(int inf, int sup) {
+		int NFILAS,NCOL;
+		System.out.println("Cuantas filas quieres?");
+		NFILAS=sc();
+		System.out.println("Cuantas columnas quieres?");
+		NCOL=sc();
+		int [][] v = new int[NFILAS][NCOL];
+		
+		for (int i = 0; i < v.length; i++) {
+			for (int j = 0; j < v.length; j++) {
+				v[i][j]=(int) Math.random()*(sup-inf)+inf;
+			}
+		}
+		
+		for (int i = 0; i < v.length; i++) {
+			for (int j = 0; j < v.length; j++) {
+				System.out.print(v[i][j]);
+			}
+			System.out.println("");
+		}
+		
+		return v;
+	}
+	
+	
+	
+	static int sc() {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		return n;
+	}
+
+}

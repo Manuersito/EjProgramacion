@@ -1,0 +1,17 @@
+package pack;
+
+import java.util.Arrays;
+
+public class ej1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int k = 5;
+int []v= {1,5,3,8,2,7,4,3,5};
+
+	}
+	static void ordenarParcial(int[] v, int k) {
+        Arrays.sort(v, 0, k + 1);
+        System.out.println(Arrays.toString(v));
+    }
+}

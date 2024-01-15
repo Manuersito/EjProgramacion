@@ -1,0 +1,28 @@
+package pack;
+
+import java.util.Scanner;
+
+public class ej5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int RANGIF=1; 
+		int RANGSUP=8;
+		int [][] v = generaArrayBiInt(RANGIF, RANGSUP);
+	}
+
+	static int[][] generaArrayBiInt(int inf, int sup) {
+		int NFILAS=sc(),NCOL=sc();
+		
+		return null;
+	}
+	
+	
+	
+	static int sc() {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		return n;
+	}
+
+}

@@ -1,0 +1,72 @@
+package pack;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class ej5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int RANGINF = 1;
+		int RANGSUP = 8;
+		//primer metodo en las variables de arriba cambias los valores de rango
+		int[][] v = generaArrayBiInt(RANGINF, RANGSUP);
+		
+		//segundo metodo
+		System.out.println("Introduce el numero de la fila que quieres ver");
+		int fila=sc();
+		filaDeArrayBiInt(v, fila);
+	}
+
+	//parte 1.
+	static int[][] generaArrayBiInt(int inf, int sup) {
+		int NFILAS, NCOL;
+		System.out.println("Cuantas filas quieres?");
+		NFILAS = sc();
+		System.out.println("Cuantas columnas quieres?");
+		NCOL = sc();
+		int[][] v = new int[NFILAS][NCOL];
+
+		for (int i = 0; i < v.length; i++) {
+			for (int j = 0; j < v.length; j++) {
+				v[i][j] = (int) Math.random() * (sup - inf) + inf;
+			}
+		}
+
+		for (int i = 0; i < v.length; i++) {
+			for (int j = 0; j < v.length; j++) {
+				System.out.print(v[i][j]);
+			}
+			System.out.println("");
+		}
+
+		return v;
+	}
+	// parte 2.
+
+	static int[] filaDeArrayBiInt(int [][] v, int fila){
+		int a[]=null;
+		
+		for (int k = 0; k < v.length; k++) {
+			for (int j = 0; j < v.length; j++) {
+				a[k] =(int) v[fila][j];
+			}
+		}
+		
+		for (int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
+		}
+		
+		return a;
+	}
+	
+	
+	
+	
+	static int sc() {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		return n;
+	}
+
+}

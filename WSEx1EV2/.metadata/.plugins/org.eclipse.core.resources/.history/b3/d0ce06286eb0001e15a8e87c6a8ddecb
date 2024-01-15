@@ -1,0 +1,15 @@
+package pack;
+
+public class ej2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[]m = {3,5,7};
+		int[]n= {1,2,4};
+		int[]unido=combinacionVectores(m,n);
+	}
+	static int[] combinacionVectores(int[] m,int []n) {
+		
+		return unido;
+	}
+}

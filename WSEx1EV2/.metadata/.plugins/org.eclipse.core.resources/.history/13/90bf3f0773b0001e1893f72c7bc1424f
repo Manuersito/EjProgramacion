@@ -1,0 +1,14 @@
+package pack;
+
+import java.util.Arrays;
+
+public class ej1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int []a= {1,5,3,8,2,7,4,3,5}
+	}
+	static void ordenarParcial(int[] array, int fin) {
+        Arrays.sort(array, 0, fin + 1);
+    }
+}

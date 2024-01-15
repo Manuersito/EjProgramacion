@@ -1,0 +1,41 @@
+package pack;
+
+import java.util.Arrays;
+
+public class ej1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int k = 5;
+		int[] v = { 1, 5, 3, 8, 2, 7, 4, 3, 5 };
+
+		System.out.println("Original");
+		System.out.println(Arrays.toString(v));
+		System.out.println();
+		
+		//parte a
+		System.out.println("rotado "+k+" veces a la derecha");
+		rotacionDerecha(v, k);
+		System.out.println(Arrays.toString(v));
+		System.out.println();
+		
+		//parte b
+		System.out.println("ordenado hasta el quinto numero "+k);
+		ordenarParcial(v, k);
+		System.out.println(Arrays.toString(v));
+	}
+
+	static void rotacionDerecha(int[] array, int pasos) {
+		int n = array.length;
+		pasos = pasos % n;
+
+		int[] temp = Arrays.copyOfRange(array, n - pasos, n);
+		System.arraycopy(array, 0, array, pasos, n - pasos);
+		System.arraycopy(temp, 0, array, 0, pasos);
+	}
+
+	static void ordenarParcial(int[] v, int k) {
+		Arrays.sort(v, 0, k + 1);
+
+	}
+}
