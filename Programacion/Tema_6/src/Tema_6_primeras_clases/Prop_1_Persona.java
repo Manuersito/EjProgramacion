@@ -1,4 +1,4 @@
-package Tema_6_Popuesta_Profesora;
+package Tema_6_primeras_clases;
 
 public class Prop_1_Persona {
     String nombre;

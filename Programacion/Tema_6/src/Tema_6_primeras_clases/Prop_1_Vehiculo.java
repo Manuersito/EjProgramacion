@@ -1,4 +1,6 @@
-package Tema_6_Popuesta_Profesora;
+package Tema_6_primeras_clases;
+
+import java.security.PublicKey;
 
 public class Prop_1_Vehiculo {
     String matricula;
@@ -9,6 +11,12 @@ public class Prop_1_Vehiculo {
         this.matricula = matricula;
         this.marca = marca;
         this.color = color;
+    }
+    
+    public void mostrar() {
+    	System.out.println("Matricula "+ getMatricula());
+		System.out.println("Marca "+ getMarca());
+		System.out.println("Color "+ getColor());
     }
 
     public String getMatricula() {

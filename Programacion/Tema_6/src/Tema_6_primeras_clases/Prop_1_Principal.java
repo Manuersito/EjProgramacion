@@ -1,4 +1,4 @@
-package Tema_6_Popuesta_Profesora;
+package Tema_6_primeras_clases;
 
 import java.util.Scanner;
 
@@ -19,9 +19,7 @@ Scanner sc = new Scanner(System.in);
 
 		Prop_1_Vehiculo v = new Prop_1_Vehiculo("2345CPT","Toyota","Blanco");
 
-		System.out.println("Matricula "+ v.getMatricula());
-		System.out.println("Marca "+ v.getMarca());
-		System.out.println("Color "+ v.getColor());
+		v.mostrar();
 		System.out.println("que color quieres ahora?");
 		String color = sc.nextLine();
 		v.setColor(color);
