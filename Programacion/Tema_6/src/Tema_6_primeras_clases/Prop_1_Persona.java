@@ -1,15 +1,22 @@
 package Tema_6_primeras_clases;
 
 public class Prop_1_Persona {
-    String nombre;
-    int edad;
+   private String nombre;
+   private int edad;
+
+    public Prop_1_Persona() {
+		
+	}
+
 
     public Prop_1_Persona(String nombre, int edad) {
-        this.nombre = nombre;
-        this.edad = edad;
-    }
+		this.nombre = nombre;
+		this.edad = edad;
+	}
 
-    public String getNombre() {
+
+
+	public String getNombre() {
         return nombre;
     }
 
