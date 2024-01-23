@@ -1,7 +1,7 @@
 package Tema_6_Pila_y_Cola;
 
 public class Main {
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Pila p = new Pila();
