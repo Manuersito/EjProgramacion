@@ -3,7 +3,7 @@ package Tema_6_Lista;
 import java.util.Arrays;
 
 public class Lista {
-Integer [] tabla;
+public Integer [] tabla;
 
 public Lista() {
 tabla =new Integer[0];	
