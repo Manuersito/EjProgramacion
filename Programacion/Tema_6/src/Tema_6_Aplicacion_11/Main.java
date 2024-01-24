@@ -1,4 +1,4 @@
-package Tema_6_Resuelta_11;
+package Tema_6_Aplicacion_11;
 
 public class Main {
 
