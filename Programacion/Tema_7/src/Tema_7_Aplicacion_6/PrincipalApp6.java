@@ -1,4 +1,4 @@
-package app6;
+package Tema_7_Aplicacion_6;
 
 public class PrincipalApp6 {
 

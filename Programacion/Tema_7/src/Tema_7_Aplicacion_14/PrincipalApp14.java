@@ -1,4 +1,4 @@
-package app14;
+package Tema_7_Aplicacion_14;
 
 public class PrincipalApp14 {
 	public static void main(String[] args) {

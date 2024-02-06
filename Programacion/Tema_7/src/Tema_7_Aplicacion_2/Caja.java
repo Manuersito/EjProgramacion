@@ -1,4 +1,4 @@
-package app2;
+package Tema_7_Aplicacion_2;
 
 public class Caja {
 	int ancho, alto, fondo;

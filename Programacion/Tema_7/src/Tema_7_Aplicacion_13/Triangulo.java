@@ -1,6 +1,6 @@
-package app13;
+package Tema_7_Aplicacion_13;
 
-import app12.Poligono;
+import Tema_7_Aplicacion_12.Poligono;
 
 public class Triangulo extends Poligono {
 	

@@ -1,6 +1,6 @@
-package app9;
+package Tema_7_Aplicacion_9;
 
-import app4.Lista;
+import Tema_7_Aplicacion_4.Lista;
 
 public class Conjunto extends Lista{
 

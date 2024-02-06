@@ -1,8 +1,8 @@
-package app6;
+package Tema_7_Aplicacion_6;
 
 import java.util.Arrays;
 
-import app4.Lista;
+import Tema_7_Aplicacion_4.Lista;
 
 public class PilaApp6 extends Lista {
 

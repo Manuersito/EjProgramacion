@@ -1,10 +1,10 @@
-package app1;
+package Tema_7_Aplicacion_1;
 
-import Resuelta8_4.Instrumento;
-import Resuelta8_4.Nota;
+import Tema_7_Resuelta_8.Instrumento;
+import Tema_7_Resuelta_8.Notas;
 
 public class Campana extends Instrumento {
 	public void Instrumento() {
-		melodia = new Nota [0];
+		melodia = new Notas [0];
 	}
 }

@@ -1,8 +1,8 @@
-package app8;
+package Tema_7_Aplicacion_8;
 
-import app7.ColaApp7;
-import app4.Lista;
-import app6.PilaApp6;
+import Tema_7_Aplicacion_7.ColaApp7;
+import Tema_7_Aplicacion_4.Lista;
+import Tema_7_Aplicacion_6.PilaApp6;
 
 public class ColaDoble extends ColaApp7 {
 

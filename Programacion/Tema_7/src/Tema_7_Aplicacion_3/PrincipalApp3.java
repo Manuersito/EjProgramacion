@@ -1,7 +1,7 @@
-package app3;
+package Tema_7_Aplicacion_3;
 
-import app2.Caja;
-import app2.Unidad;
+import Tema_7_Aplicacion_2.Caja;
+import Tema_7_Aplicacion_2.Unidad;
 
 public class PrincipalApp3 {
 

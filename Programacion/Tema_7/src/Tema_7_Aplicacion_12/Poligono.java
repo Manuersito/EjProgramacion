@@ -1,4 +1,4 @@
-package app12;
+package Tema_7_Aplicacion_12;
 
 public abstract class Poligono {
 	

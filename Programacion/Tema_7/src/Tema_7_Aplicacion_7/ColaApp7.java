@@ -1,8 +1,8 @@
-package app7;
+package Tema_7_Aplicacion_7;
 
 import java.util.Arrays;
 
-import app4.Lista;
+import Tema_7_Aplicacion_4.Lista;
 
 public class ColaApp7 extends Lista{
 	
