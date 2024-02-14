@@ -1,0 +1,11 @@
+Realizar un menú de opciones para llevar el mantenimiento de una asociación de forma que de cada socio los datos son: un ID, un nombre y una fecha de nacimiento. 
+El ID es el campo clave y no se puede repetir, de tipo numérico. Además, se desea conocer cuál es el número de socios que tiene la asociación. 
+Las operaciones que se van a realizar son: 
+* Alta de socio (comprobar que el ID sea único)
+* Eliminación de socio (solicita el ID que quiera eliminar)
+* Consultar el nº de socios existentes
+* Consultar los datos de un socio en concreto (solicita ID)
+* Modificar la fecha de nacimiento (solicita ID)
+* Listado ordenado por ID (criterio de ordenación natural)
+* Listado ordenado por la edad y en caso de la misma edad, se ordenará por el nombre del socio
+* Salir
