@@ -1,5 +1,7 @@
 package ejEva_1;
 
-public class ConjuntoSocio extends Socio{
+public class ConjuntoSocio{
+Socio aso [] = new Socio [0];
+
 
 }
