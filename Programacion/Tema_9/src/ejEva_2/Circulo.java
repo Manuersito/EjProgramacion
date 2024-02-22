@@ -3,11 +3,18 @@ package ejEva_2;
 public class Circulo extends FiguraGeometrica {
 	int radio;
 
-	public Circulo(int radio, String color) {
+	public Circulo(int radio) {
 		super();
 		this.radio = radio;
-		this.color = color;
+		
 	}
+	
+
+	public Circulo(String color, int radio) {
+		super(color);
+		this.radio = radio;
+	}
+
 
 	public int getRadio() {
 		return radio;

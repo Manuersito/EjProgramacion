@@ -4,6 +4,15 @@ public abstract class FiguraGeometrica implements Imprimible{
 	static int NumFG = 0;
 	String color;
 
+	public FiguraGeometrica(String color) {
+		
+		this.color = color;
+	}
+
+	public FiguraGeometrica() {
+		this.color = "verde";
+	}
+
 	abstract double calcularArea();
 
 	public void setColor(String color) {

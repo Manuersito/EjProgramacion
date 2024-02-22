@@ -3,12 +3,20 @@ package ejEva_2;
 public class Rectangulo extends FiguraGeometrica {
 	double base, altura;
 
-	public Rectangulo(double base, double altura, String color) {
+	public Rectangulo( String color,double base, double altura) {
+		super(color);
+		this.base = base;
+		this.altura = altura;
+		
+	}
+	
+
+	public Rectangulo(double base, double altura) {
 		super();
 		this.base = base;
 		this.altura = altura;
-		this.color = color;
 	}
+
 
 	public double getBase() {
 		return base;
@@ -30,6 +38,12 @@ public class Rectangulo extends FiguraGeometrica {
 	double calcularArea() {
 		double area = getBase() * getAltura();
 		return area;
+	}
+
+	@Override
+	public String toString() {
+		return "Rectangulo [base=" + base + ", altura=" + altura + ", Area=" + calcularArea()
+				+ ", Color=" + getColor() + "]";
 	}
 
 }

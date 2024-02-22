@@ -4,18 +4,26 @@ public class Triangulo extends FiguraGeometrica {
 
 	double base, altura;
 
-	public Triangulo(double base, double altura, String color) {
+	public Triangulo(double base, double altura) {
 		super();
 		this.base = base;
 		this.altura = altura;
-		this.color = color;
-	}
-
-	public Triangulo() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	
+
+	
+
+	public Triangulo(String color, double base, double altura) {
+		super(color);
+		this.base = base;
+		this.altura = altura;
+	}
+
+
+
+
 
 	public double getBase() {
 		return base;
@@ -39,5 +47,12 @@ public class Triangulo extends FiguraGeometrica {
 		double area =(getBase()*getAltura())/2 ;
 		return area;
 	}
+
+	@Override
+	public String toString() {
+		return "Triangulo [base=" + base + ", altura=" + altura +", Area="
+				+ calcularArea() + ", color=" + color + "]";
+	}
+	
 	
 }
