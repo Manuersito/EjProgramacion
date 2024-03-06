@@ -21,11 +21,11 @@ public class Propuesta1 {
             // TODO: handle exception
             System.out.println(ex.getMessage());
             
-        }finally {  // En cualquier caso, cerramos el flujo de lectura del archivo
-            if (in != null) {  // Si el flujo está abierto
+        }finally {  
+            if (in != null) {  
                 try {
-                    in.close();  // Cerramos el flujo
-                } catch (IOException ex) {  // Si se produce una excepción, imprimir un mensaje con la descripción del error
+                    in.close();  
+                } catch (IOException ex) {  
                     System.out.println(ex);
                 }
             }
