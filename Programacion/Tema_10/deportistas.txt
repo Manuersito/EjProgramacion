@@ -1,0 +1,5 @@
+Nombre					edad	peso	altura
+Juan Pedro Pérez Gómez 	25 		70,5 	1,80
+Ana Ruiz del Val 		23 		60 		1,75
+Manuel Bernaldez		21		93 		1,73
+Pablo Rodriguez			22		80 		1,75
