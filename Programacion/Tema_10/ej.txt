@@ -1,0 +1,13 @@
+1. dado 2 ficheros de texto, en cada fichero hay un numero por cada linea. obtener todos 1 fichero con todos los numeros sin repetir ninguno
+
+
+2. dado 1 fichero de texto, obtener 2 ficheros de texto con las minusculas y las mayusculas por separado.
+
+
+3. dado 1 fichero de texto sustituirlo por otro con sus lineas en orden alfabetico
+
+4. dado 1 fichero de texto leer por teclado un tamaño o longitud de palabra para obtener 2 ficheros de palabras. 
+1 con todas las palabras menores y otra con todas las palabras mayores a esa longitud. se supone que todas las palabras estan separadas por 1 espacio
+
+5. dado un fichero de texto con matriculas 1 por linea obtener otro fichero de texto con las matriculas que cumplan lo siguiente: 3 letras mayusculas en cada matricula que no pueden ser vocales. seguidas de un espacio en blanco y 4 digitos.
+
