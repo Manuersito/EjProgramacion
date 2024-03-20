@@ -33,26 +33,30 @@ public class prop_eva_5 {
 	
 		public static boolean validarMatricula(String matricula) {
 	        // Verificar la longitud de la matrícula
-	        if (matricula.length() != 8)
+	        if (matricula.length() != 8) {
 	            return false;
+	            }
 
 	        // Verificar las letras
 	        for (int i = 0; i < 3; i++) {
 	            char c = matricula.charAt(i);
-	            if (!(Character.isLetter(c) && Character.isUpperCase(c) && !esVocal(c)))
+	            if (!(Character.isLetter(c) && Character.isUpperCase(c) && !esVocal(c))) {
 	                return false;
+	                }
 	        }
 
 	        // Verificar los dígitos
 	        for (int i = 4; i < 8; i++) {
 	            char c = matricula.charAt(i);
-	            if (!Character.isDigit(c))
+	            if (!Character.isDigit(c)) {
 	                return false;
+	                }
 	        }
 
 	        // Verificar el espacio en blanco
-	        if (matricula.charAt(3) != ' ')
+	        if (!Character.isWhitespace(matricula.charAt(3))) {
 	            return false;
+	            }
 
 	        return true;
 	    }
